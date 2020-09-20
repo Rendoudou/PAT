@@ -1,3 +1,5 @@
+//#pragma warning(disable : 4996)
+//
 //#include <iostream>
 //#include <string>
 //#include <vector>
@@ -10,14 +12,19 @@
 //
 //struct list_node
 //{
+//	int pos;
 //	int adress;
-//	int data;
 //	int next_adress;
+//	int data;
 //};
 //
 //vector<list_node> buffer_2;
 //vector<list_node> buffer_1;
-//vector<list_node> buffer_2;
+//
+//bool pos_greater(const list_node& a, const list_node& b)
+//{
+//	return (a.pos < b.pos);
+//}
 //
 //int main()
 //{
@@ -28,12 +35,13 @@
 //	list_node temp_node;
 //	for (unsigned int i = 0; i < n; i++)
 //	{
-//		cin >> temp_node.adress;
-//		cin >> temp_node.data;
-//		cin >> temp_node.next_adress;
+//		scanf("%d", &temp_node.adress);
+//		scanf("%d", &temp_node.data);
+//		scanf("%d", &temp_node.next_adress);
 //		buffer_1.push_back(temp_node);
 //	}
 //
+//	/*排序*/
 //	//取出第一个
 //	for (unsigned int i = 0; i < n; i++)
 //		if (buffer_1[i].adress == first_adrr)
@@ -45,7 +53,7 @@
 //	int aim_adrr = buffer_2[0].next_adress;
 //	while (true)
 //	{
-//		for(unsigned int i =0; i < n; i++)
+//		for (unsigned int i = 0; i < n; i++)
 //			if (buffer_1[i].adress == aim_adrr)
 //			{
 //				buffer_2.push_back(buffer_1[i]);
@@ -58,43 +66,51 @@
 //
 //	//更新n
 //	n = buffer_2.size();
+//
+//	//重置次序
 //	unsigned int zu = n / reflex_count;
 //	unsigned int re = n % reflex_count;
-//
+//	int pos_reset = 0;
 //	for (int i = 0; i < zu; i++)
 //	{
-//		for (int j = reflex_count * (i + 1) - 1; j >= reflex_count * i; j--)
+//		for (int j = reflex_count * (i+1) - 1; j >= reflex_count * i; j--)
 //		{
+//			buffer_2[j].pos = pos_reset;
+//			pos_reset++;
+//		}
+//	}
+//	for (int i = zu * reflex_count; i < n; i++)
+//	{
+//		buffer_2[i].pos = pos_reset;
+//		pos_reset++;
+//	}
 //
-//			if (i != 0 && (j == reflex_count * (i + 1) - 1)) //两组之间相连
-//				buffer_2[i * reflex_count - 1].next_adress = buffer_2[j].adress;
-//			if (j == reflex_count * i)
-//				buffer_2[j].next_adress = -1;
-//			else
-//				buffer_2[j].next_adress = buffer_2[j - 1].adress;
+//	// 重置次序
+//	sort(buffer_2.begin(), buffer_2.end(), pos_greater);
 //
-//			buffer_2.push_back(buffer_2[j]);
+//	//设置连接
+//	for (int i = 0; i < n; i++)
+//	{
+//		if (i == n - 1)
+//		{
+//			buffer_2[i].next_adress = -1;
+//			break;
+//		}
+//		else
+//		{
+//			buffer_2[i].next_adress = buffer_2[i + 1].adress;
 //		}
 //	}
 //
-//	for (unsigned int i = zu * reflex_count; i < buffer_2.size(); i++)
-//	{
-//		if (i == zu * reflex_count)
-//			buffer_2[buffer_2.size() - 1].next_adress = buffer_2[i].adress; //上一个最后一个
-//		if (i == buffer_2.size() - 1)
-//			buffer_2[i].next_adress = -1;
-//		buffer_2.push_back(buffer_2[i]);
-//
-//	}
-//
+//	//display
 //	for (unsigned int i = 0; i < buffer_2.size(); i++)
 //	{
-//		cout << setw(5) << setfill('0') << buffer_2[i].adress;
-//		cout << ' ' << buffer_2[i].data;
-//		if (buffer_2[i].next_adress == -1)
-//			cout << ' ' << -1;
+//		printf("%05d", buffer_2[i].adress);
+//		printf(" %d", buffer_2[i].data);
+//		if (i == n - 1)
+//			printf(" -1");
 //		else
-//			cout << ' ' << setw(5) << setfill('0') << buffer_2[i].next_adress << endl;
+//			printf(" %05d\n", buffer_2[i].next_adress);
 //	}
 //
 //	return 0;
