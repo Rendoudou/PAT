@@ -154,6 +154,10 @@
     <ClCompile Include="P30.cpp" />
     <ClCompile Include="P31.cpp" />
     <ClCompile Include="P32.cpp" />
+    <ClCompile Include="P33.cpp" />
+    <ClCompile Include="p34.cpp" />
+    <ClCompile Include="P35.cpp" />
+    <ClCompile Include="P36.cpp" />
     <ClCompile Include="P4.cpp" />
     <ClCompile Include="P5.cpp" />
     <ClCompile Include="P6.cpp" />
