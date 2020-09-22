@@ -138,5 +138,29 @@
     <ClCompile Include="P36.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P37.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P38.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P39.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P40.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P40_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P41.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P42.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P43.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

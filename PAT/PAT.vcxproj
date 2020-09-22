@@ -158,7 +158,15 @@
     <ClCompile Include="p34.cpp" />
     <ClCompile Include="P35.cpp" />
     <ClCompile Include="P36.cpp" />
+    <ClCompile Include="P37.cpp" />
+    <ClCompile Include="P38.cpp" />
+    <ClCompile Include="P39.cpp" />
     <ClCompile Include="P4.cpp" />
+    <ClCompile Include="P40.cpp" />
+    <ClCompile Include="P40_2.cpp" />
+    <ClCompile Include="P41.cpp" />
+    <ClCompile Include="P42.cpp" />
+    <ClCompile Include="P43.cpp" />
     <ClCompile Include="P5.cpp" />
     <ClCompile Include="P6.cpp" />
     <ClCompile Include="P7.cpp" />
