@@ -169,6 +169,8 @@
     <ClCompile Include="P43.cpp" />
     <ClCompile Include="P44.cpp" />
     <ClCompile Include="P45.cpp" />
+    <ClCompile Include="P45_2.cpp" />
+    <ClCompile Include="P46.cpp" />
     <ClCompile Include="P5.cpp" />
     <ClCompile Include="P6.cpp" />
     <ClCompile Include="P7.cpp" />

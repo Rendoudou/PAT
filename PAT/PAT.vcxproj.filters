@@ -168,5 +168,11 @@
     <ClCompile Include="P45.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P45_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P46.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

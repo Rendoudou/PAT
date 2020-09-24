@@ -1,3 +1,7 @@
-﻿  P44.cpp
-c:\users\lenovo\desktop\pat\pat\pat\p44.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+﻿  P45.cpp
+c:\users\lenovo\desktop\pat\pat\pat\p45.cpp(26): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\lenovo\desktop\pat\pat\pat\p45.cpp(39): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\lenovo\desktop\pat\pat\pat\p45.cpp(53): warning C4018: “<”: 有符号/无符号不匹配
+  P45_2.cpp
+  正在生成代码...
   PAT.vcxproj -> C:\Users\lenovo\Desktop\pat\PAT\Debug\PAT.exe
