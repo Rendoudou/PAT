@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996)
+/*#pragma warning(disable : 4996)
 #include <iostream>
 #include <string>
 #include <vector>
@@ -59,4 +59,4 @@ int main()
 	}
 	printf("\n");
 	return 0;
-}
+}*/
