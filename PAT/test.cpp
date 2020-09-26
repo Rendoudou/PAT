@@ -18,21 +18,20 @@ int main()
 	getline(cin, buffer_in);
 	int tou = 0, wei = 0, length = buffer_in.size();
 
-	bool flag_tou = true, flag_wei = true, out_flag = false;
+	bool flag_tou = true, out_flag = false;
 	int count_zero = 0;
 	for (int i = 0; i < length; i++)
 	{
-		if (flag_tou && buffer_in[i] == '1') //»¹Ã»³öÏÖÍ· ´ËÊ±³öÏÖÁË¡®1¡¯Í·
+		if (flag_tou && buffer_in[i] == '1') //è¿˜æ²¡å‡ºçŽ°å¤´ æ­¤æ—¶å‡ºçŽ°äº†â€˜1â€™å¤´
 		{
 			tou = i;
 			flag_tou = false;
 		}
-		if (flag_tou == false && flag_wei)  //¿ªÊ¼ÕÒÎ²²¿
+		if (flag_tou == false)  //å¼€å§‹æ‰¾å°¾éƒ¨
 		{
 			if (buffer_in[i] == '1')
 			{
 				wei = i;
-				continue;
 			}
 			if (buffer_in[i] == '0')
 			{
@@ -40,22 +39,20 @@ int main()
 				if (count_zero == 2)
 				{
 					out_flag = true;
-					flag_wei = false;
 				}
 			}
 		}
-		if (out_flag || (i == length - 1 && flag_tou == false && out_flag == false))
+		if (out_flag || (i == length - 1 && flag_tou == false))
 		{
 			first_check.push_back(buffer_in.substr(tou, wei - tou + 1));
 			out_flag = false;
 			flag_tou = true;
-			flag_wei = true;
 			count_zero = 0;
 		}
 	}
 
-	cout << "½á¹û" << endl;
-	cout << first_check.size() << endl;
+	cout << "result" << endl;
+	cout << "result counts : " <<first_check.size() << endl;
 
 	for (unsigned int i = 0; i < first_check.size(); i++)
 	{
