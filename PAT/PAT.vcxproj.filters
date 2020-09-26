@@ -180,10 +180,16 @@
     <ClCompile Include="P48.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P48_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="P49.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="P50.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P51.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

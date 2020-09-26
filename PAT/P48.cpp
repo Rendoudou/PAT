@@ -48,9 +48,58 @@ int main()
 
 	reverse(out_buffer.begin(), out_buffer.end());
 
+	// B < A
 	if (B_length < A_length)
 		for (int i = 0; i < A_length - B_length; i++)
-			printf("0");
+		{
+			if (ji_wei)
+			{
+				res_temp = (int(A_buffer[i] - '0') + 0) % 13;
+				if (res_temp == 10)
+					printf("J");
+				else if (res_temp == 11)
+					printf("Q");
+				else if (res_temp == 12)
+					printf("K");
+				else
+					printf("%c", char('0' + res_temp));
+				ji_wei = false;
+			}
+			else
+			{
+				res_temp = '0' - A_buffer[i];
+				if (res_temp < 0)
+					res_temp += 10;
+				printf("%c",char('0' + res_temp));
+				ji_wei = true;
+			}
+		}
+	else
+		for (int i = 0; i < B_length - A_length; i++)
+		{
+			if (ji_wei)
+			{
+				res_temp = (int(B_buffer[i] - '0') + 0) % 13;
+				if (res_temp == 10)
+					printf("J");
+				else if (res_temp == 11)
+					printf("Q");
+				else if (res_temp == 12)
+					printf("K");
+				else
+					printf("%c", char('0' + res_temp));
+				ji_wei = false;
+			}
+			else
+			{
+				res_temp = B_buffer[i] - '0';
+				if (res_temp < 0)
+					res_temp += 10;
+				printf("%c", char('0' + res_temp));
+				ji_wei = true;
+			}
+		}
+	//B >= A
 	std::cout << out_buffer;
 
 	return 0;

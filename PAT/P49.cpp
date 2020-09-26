@@ -9,48 +9,18 @@
 #include <iomanip>
 using namespace std;
 
-int main()
-{
-
-	string a, b;
-	cin >> a >> b;
-	int l1 = a.length(), l2 = b.length();
-	int max = l1 > l2 ? l1 : l2;
-	if (l1 > l2)
-		for (int i = 0; i < l1 - l2; i++)
-			b = '0' + b;
-	else
-		for (int i = 0; i < l2 - l1; i++)
-			a = '0' + a;
-
-	bool ji_wei = true;
-	int res_temp = 0;
-	for (int i = max - 1; i >= 0; i--)
-	{
-		if (ji_wei) // ÆæÊýÎ»
-		{
-			res_temp = (int(a[i] - '0') + int(b[i] - '0')) % 13;
-			if (res_temp == 10)
-				 b[i] = 'J';
-			else if (res_temp == 11)
-				 b[i] = 'Q';
-			else if (res_temp == 12)
-				 b[i] = 'K';
-			else
-				b[i] = char('0' + res_temp);
-			ji_wei = false;
-		}
-		else
-		{
-			res_temp = b[i] - a[i];
-			if (res_temp < 0)
-				res_temp += 10;
-			b[i] = (char('0' + res_temp));
-			ji_wei = true;
-		}
+int main(){
+	long long n = 0;
+	cin >> n;
+	long long size = n;
+	long double sum = 0.0f, temp = 0.0f;
+	for (int i = 0; i < n; i++) {
+		cin >> temp;
+		//sum += (size - i) * (i + 1) * temp;
+		sum += size * (n + 1 - size) * temp;
+		size--;
 	}
 
-	cout << b;
-
+	printf("%.2llf", sum);
 	return 0;
 }*/
