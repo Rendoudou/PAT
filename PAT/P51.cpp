@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996)
+/*#pragma warning(disable : 4996)
 #include <iostream>
 #include <vector>
 #include <string>
@@ -33,5 +33,5 @@ int main()
 	printf("%.2llfi", imag);
 	return 0;
 }
-
+*/
 //因为题目说明了实部和虚部均保留 2 位小数。绝对值小于0.005的负数其结果应该是0.00（四舍五入）。
