@@ -207,5 +207,14 @@
     <ClCompile Include="P56.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P57.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P58.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P59.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
