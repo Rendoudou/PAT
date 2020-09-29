@@ -186,7 +186,9 @@
     <ClCompile Include="P57.cpp" />
     <ClCompile Include="P58.cpp" />
     <ClCompile Include="P59.cpp" />
+    <ClCompile Include="P59_2.cpp" />
     <ClCompile Include="P6.cpp" />
+    <ClCompile Include="P60.cpp" />
     <ClCompile Include="P7.cpp" />
     <ClCompile Include="P8.cpp" />
     <ClCompile Include="P9.cpp" />
