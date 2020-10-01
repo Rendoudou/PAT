@@ -51,9 +51,6 @@
     <ClCompile Include="P12_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="p13.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="P14.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -85,9 +82,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="P22.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="p22_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="P23.cpp">
@@ -127,9 +121,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="P33.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="p34.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="P35.cpp">
@@ -220,6 +211,33 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="P60.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P61.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P62.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P62_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P63.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P64.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P65.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P22_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P34.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P13.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
