@@ -7,7 +7,7 @@
 #include <math.h>
 #include <sstream>
 #include <iomanip>
-#include<map>
+#include <map>
 using namespace std;
 
 bool sort_greatter(const int & a, const int & b)
@@ -57,7 +57,7 @@ int main()
 	//已婚的独自来的
 	for (int i = 0; i < married_in_party.size(); i++)
 	{
-		if (people[his_her_couple[married_in_party[i]]] == "in party.")//另一本是不是在派对上
+		if (people[his_her_couple[married_in_party[i]]] == "in party.")//另一半是不是在派对上？
 			continue;
 		else
 			dan_shen_id_buffer.push_back(married_in_party[i]);

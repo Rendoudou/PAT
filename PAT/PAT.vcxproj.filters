@@ -240,5 +240,23 @@
     <ClCompile Include="P13.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P66.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P67.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P68.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P68_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P69.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P70.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
