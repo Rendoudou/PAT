@@ -267,5 +267,20 @@
     <ClCompile Include="P73.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P74.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P74_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P75.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P75_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P25_3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

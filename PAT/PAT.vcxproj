@@ -146,6 +146,7 @@
     <ClCompile Include="P24.cpp" />
     <ClCompile Include="P25.cpp" />
     <ClCompile Include="P25_2.cpp" />
+    <ClCompile Include="P25_3.cpp" />
     <ClCompile Include="P26.cpp" />
     <ClCompile Include="P27.cpp" />
     <ClCompile Include="P28.cpp" />
@@ -205,6 +206,10 @@
     <ClCompile Include="P71.cpp" />
     <ClCompile Include="P72.cpp" />
     <ClCompile Include="P73.cpp" />
+    <ClCompile Include="P74.cpp" />
+    <ClCompile Include="P74_2.cpp" />
+    <ClCompile Include="P75.cpp" />
+    <ClCompile Include="P75_2.cpp" />
     <ClCompile Include="P8.cpp" />
     <ClCompile Include="P9.cpp" />
   </ItemGroup>
