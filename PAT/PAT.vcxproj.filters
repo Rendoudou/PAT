@@ -282,5 +282,20 @@
     <ClCompile Include="P25_3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P76.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P77.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P78.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P79.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P80.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
