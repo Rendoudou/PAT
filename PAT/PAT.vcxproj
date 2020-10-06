@@ -216,6 +216,8 @@
     <ClCompile Include="P79.cpp" />
     <ClCompile Include="P8.cpp" />
     <ClCompile Include="P80.cpp" />
+    <ClCompile Include="P81.cpp" />
+    <ClCompile Include="P82.cpp" />
     <ClCompile Include="P9.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
