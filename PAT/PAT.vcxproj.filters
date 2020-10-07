@@ -303,5 +303,14 @@
     <ClCompile Include="P82.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P83.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P84.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P85.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
