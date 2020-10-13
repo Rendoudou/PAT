@@ -12,9 +12,9 @@ using namespace std;
 
 
 /************************************************************************/
-/*                            ¿¼ÉúĞÅÏ¢                                  */
+/*                            è€ƒç”Ÿä¿¡æ¯                                  */
 /************************************************************************/
-// STU ¿¼ÊÔµÈ¼¶
+// STU è€ƒè¯•ç­‰çº§
 enum TestLevel {
 	NONE = 0,
 	LEVEL_T,
@@ -22,7 +22,7 @@ enum TestLevel {
 	LEVEL_B,
 };
 
-// STU ½á¹¹Ìå
+// STU ç»“æ„ä½“
 struct Stu{
 	string test_id_str;
 	TestLevel level = NONE;
@@ -34,13 +34,13 @@ struct Stu{
 	bool decl_stu_info(void);
 };
 
-// STU ´¦Àí×Ö·û´®
+// STU å¤„ç†å­—ç¬¦ä¸²
 bool Stu::decl_stu_info(void) {
 
 	if (test_id_str.size() <= 0)
 		return false;
 
-	//µÈ¼¶
+	//ç­‰çº§
 	char level = test_id_str[0];
 	if (level == 'B')
 		this->level = LEVEL_B;
@@ -49,10 +49,10 @@ bool Stu::decl_stu_info(void) {
 	else if (level == 'T')
 		this->level = LEVEL_T;
 
-	//¿¼³¡±àºÅ
+	//è€ƒåœºç¼–å·
 	this->test_place_id = stoi(test_id_str.substr(1, 3));
 
-	//ÄêÔÂÈÕ
+	//å¹´æœˆæ—¥
 	this->day = test_id_str.substr(4, 6);
 
 	//id
@@ -63,9 +63,9 @@ bool Stu::decl_stu_info(void) {
 
 
 /************************************************************************/
-/*                           ÃüÁî½á¹¹¼°´¦Àí                             */
+/*                           å‘½ä»¤ç»“æ„åŠå¤„ç†                             */
 /************************************************************************/
-// command½á¹¹
+// commandç»“æ„
 struct Command {
 
 	bool get_command(void);
@@ -79,10 +79,10 @@ struct Command {
 	
 };
 
-// ¸ù¾İtype»ñµÃÃüÁî
+// æ ¹æ®typeè·å¾—å‘½ä»¤
 bool Command::get_command(void){
 
-	if (type == 1) { // Í¬Ò»¸öµÈ¼¶µÄ¿¼ÉúÅÅĞò ½µĞò£¬Í¬·ÖÊ±°´ÕÕ×¼¿¼Ö¤½µĞò¡£
+	if (type == 1) { // åŒä¸€ä¸ªç­‰çº§çš„è€ƒç”Ÿæ’åº é™åºï¼ŒåŒåˆ†æ—¶æŒ‰ç…§å‡†è€ƒè¯é™åºã€‚
 		char temp;
 		cin >> temp;
 		this->type_1_level_char = temp;
@@ -94,17 +94,17 @@ bool Command::get_command(void){
 			this->type_1_level = LEVEL_T;
 		return true;
 	}
-	else if (2 == type) { // Êä³öÖ¸¶¨¿¼³¡µÄÈËÊıºÍ×Ü·Ö
+	else if (2 == type) { // è¾“å‡ºæŒ‡å®šè€ƒåœºçš„äººæ•°å’Œæ€»åˆ†
 		cin >> this->type_2_testplace_id;
 	}
-	else if (3 == type) { // Ä³Ö¸¶¨ÈÕÆÚµÄ¿¼ÉúÈËÊı·Ö¿¼³¡Í³¼Æ£¬Êä³öÈËÊı½µĞò£¬Í¬ÈËÊıÊ±¿¼³¡ÉıĞò
+	else if (3 == type) { // æŸæŒ‡å®šæ—¥æœŸçš„è€ƒç”Ÿäººæ•°åˆ†è€ƒåœºç»Ÿè®¡ï¼Œè¾“å‡ºäººæ•°é™åºï¼ŒåŒäººæ•°æ—¶è€ƒåœºå‡åº
 		cin >> this->type_3_day;
 	}
 	
 	return false;
 }
 
-// ÖØÔØÊä³ö
+// é‡è½½è¾“å‡º
 ostream& operator<<(ostream& os, Command& a) {
 	os << a.type << " ";
 	if (a.type == 1)
@@ -121,7 +121,7 @@ ostream& operator<<(ostream& os, Command& a) {
 
 
 /************************************************************************/
-/*                          ¿¼³¡ĞÅÏ¢½á¹¹                                */
+/*                          è€ƒåœºä¿¡æ¯ç»“æ„                                */
 /************************************************************************/
 struct TestPlace{
 	int id = 0;
@@ -130,21 +130,21 @@ struct TestPlace{
 
 
 /************************************************************************/
-/*                         ÃüÁî1Óë3 ±È½ÏÅÅĞò                            */
+/*                         å‘½ä»¤1ä¸3 æ¯”è¾ƒæ’åº                            */
 /************************************************************************/
-// compare º¯Êı
-bool cmp_type_1(const Stu& a, const Stu& b) {// Í¬Ò»¸öµÈ¼¶µÄ¿¼ÉúÅÅĞò ½µĞò£¬Í¬·ÖÊ±°´ÕÕ×¼¿¼Ö¤½µĞò¡£
+// compare å‡½æ•°
+bool cmp_type_1(const Stu& a, const Stu& b) {// åŒä¸€ä¸ªç­‰çº§çš„è€ƒç”Ÿæ’åº é™åºï¼ŒåŒåˆ†æ—¶æŒ‰ç…§å‡†è€ƒè¯é™åºã€‚
 	if (a.score != b.score)
 		return a.score > b.score;
 	else
 		return a.test_id_str < b.test_id_str;
 }
 
-bool cmp_type_3_pre(const Stu& a, const Stu& b) { //ÀàĞÍÈıÔ¤´¦Àí
+bool cmp_type_3_pre(const Stu& a, const Stu& b) { //ç±»å‹ä¸‰é¢„å¤„ç†
 	return a.test_place_id < b.test_place_id;
 }
 
-bool cmp_type_3(const TestPlace& a, const TestPlace& b) {// Ä³Ö¸¶¨ÈÕÆÚµÄ¿¼ÉúÈËÊı·Ö¿¼³¡Í³¼Æ£¬Êä³öÈËÊı½µĞò£¬Í¬ÈËÊıÊ±¿¼³¡ÉıĞò
+bool cmp_type_3(const TestPlace& a, const TestPlace& b) {// æŸæŒ‡å®šæ—¥æœŸçš„è€ƒç”Ÿäººæ•°åˆ†è€ƒåœºç»Ÿè®¡ï¼Œè¾“å‡ºäººæ•°é™åºï¼ŒåŒäººæ•°æ—¶è€ƒåœºå‡åº
 	if (a.stu_count != b.stu_count)
 		return a.stu_count > b.stu_count;
 	else
@@ -152,14 +152,14 @@ bool cmp_type_3(const TestPlace& a, const TestPlace& b) {// Ä³Ö¸¶¨ÈÕÆÚµÄ¿¼ÉúÈËÊı
 }
 
 /************************************************************************/
-/*                             mainº¯Êı                                 */
+/*                             mainå‡½æ•°                                 */
 /************************************************************************/
 int main()
 {
 	unsigned int n = 0, m = 0;
 	cin >> n >> m;
 
-	//ÊÕ¼¯Ñ§ÉúÊı¾İ
+	//æ”¶é›†å­¦ç”Ÿæ•°æ®
 	Stu temp_stu;
 	vector<Stu> stu_buf_vec;
 	for (size_t i = 0; i < n; i++){
@@ -168,7 +168,7 @@ int main()
 		stu_buf_vec.push_back(temp_stu);
 	}
 
-	//ÊÕ¼¯ÃüÁî¼¯ºÏ
+	//æ”¶é›†å‘½ä»¤é›†åˆ
 	vector<Command> command_buf_vec;
 	for (size_t i = 0; i < m; i++){
 		Command temp_command;
@@ -177,7 +177,7 @@ int main()
 		command_buf_vec.push_back(temp_command);
 	}
 
-	//´¦ÀíÃüÁî¼¯ºÏ
+	//å¤„ç†å‘½ä»¤é›†åˆ
 	vector<Stu> stu_buf_process_vec;
 	vector<TestPlace> test_place_buf_vec;
 	for (size_t i = 0; i < command_buf_vec.size(); i++) {
@@ -185,9 +185,9 @@ int main()
 		cout << command_buf_vec[i];
 		switch (command_buf_vec[i].type)
 		{
-		case (1): {// Í¬Ò»¸öµÈ¼¶µÄ¿¼ÉúÅÅĞò ½µĞò£¬Í¬·ÖÊ±°´ÕÕ×¼¿¼Ö¤ÔöĞò¡£
+		case (1): {// åŒä¸€ä¸ªç­‰çº§çš„è€ƒç”Ÿæ’åº é™åºï¼ŒåŒåˆ†æ—¶æŒ‰ç…§å‡†è€ƒè¯å¢åºã€‚
 			
-			for (size_t j = 0; j < n; j++)//¶ÁÈ¡ËùÓĞÍ¬Ò»¸öµÈ¼¶µÄ¿¼Éú
+			for (size_t j = 0; j < n; j++)//è¯»å–æ‰€æœ‰åŒä¸€ä¸ªç­‰çº§çš„è€ƒç”Ÿ
 				if (stu_buf_vec[j].level == command_buf_vec[i].type_1_level)
 					stu_buf_process_vec.push_back(stu_buf_vec[j]);
 			if (0 == stu_buf_process_vec.size()) {
@@ -200,7 +200,7 @@ int main()
 			stu_buf_process_vec.clear();
 			break;
 		}
-		case (2): {// Êä³öÖ¸¶¨¿¼³¡µÄÈËÊıºÍ×Ü·Ö
+		case (2): {// è¾“å‡ºæŒ‡å®šè€ƒåœºçš„äººæ•°å’Œæ€»åˆ†
 			
 			int sum = 0, stu_count = 0;
 			for (size_t j = 0; j < n; j++)
@@ -216,7 +216,7 @@ int main()
 			cout << stu_count << " " << sum << endl;
 			break;
 		}
-		case (3): {// Ä³Ö¸¶¨ÈÕÆÚµÄ¿¼ÉúÈËÊı·Ö¿¼³¡Í³¼Æ£¬Êä³öÈËÊı½µĞò£¬Í¬ÈËÊıÊ±¿¼³¡ÉıĞò
+		case (3): {// æŸæŒ‡å®šæ—¥æœŸçš„è€ƒç”Ÿäººæ•°åˆ†è€ƒåœºç»Ÿè®¡ï¼Œè¾“å‡ºäººæ•°é™åºï¼ŒåŒäººæ•°æ—¶è€ƒåœºå‡åº
 			
 			TestPlace temp_test_place;
 			for (size_t j = 0; j < n; j++) 
@@ -226,7 +226,7 @@ int main()
 				cout << "NA" << endl;
 				break;
 			}
-			sort(stu_buf_process_vec.begin(), stu_buf_process_vec.end(), cmp_type_3_pre);//Ô¤ÏÈÅÅĞò Í¬Ò»¸ö¿¼³¡µÄÏàÁÚ
+			sort(stu_buf_process_vec.begin(), stu_buf_process_vec.end(), cmp_type_3_pre);//é¢„å…ˆæ’åº åŒä¸€ä¸ªè€ƒåœºçš„ç›¸é‚»
 			temp_test_place.id = stu_buf_process_vec[0].test_place_id;
 			for (size_t j = 0; j < stu_buf_process_vec.size(); j++) {
 				if (stu_buf_process_vec[j].test_place_id == temp_test_place.id)
@@ -237,7 +237,7 @@ int main()
 					temp_test_place.id = stu_buf_process_vec[j].test_place_id;
 					temp_test_place.stu_count++;
 				}
-				if (j == stu_buf_process_vec.size() - 1) {//×îºóÒ»¸ö
+				if (j == stu_buf_process_vec.size() - 1) {//æœ€åä¸€ä¸ª
 					test_place_buf_vec.push_back(temp_test_place);
 					temp_test_place.stu_count = 0;
 				}
@@ -255,4 +255,4 @@ int main()
 	}
 
 	return 0;
-}*/
+}
